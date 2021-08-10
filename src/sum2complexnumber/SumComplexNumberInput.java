@@ -1,9 +1,9 @@
-package Sum2ComplexNumber;
+package sum2complexnumber;
 import java.util.Scanner;
 /**
  * Sum of 2 INPUTED complex numbers
  */
-public class ComplexNumberTest{
+public class SumComplexNumberInput {
     public static void main(String[] args) {
         double real;
         double image;
@@ -19,15 +19,16 @@ public class ComplexNumberTest{
             return;
         }
 
-        for (int i = 1; i <= randomNumber; i++) {
-
-            System.out.print("Enter the REAL part of the complex number " + i + ": ");
+        for (int i = 1; i <= randomNumber; i++)
+        {
+            System.out.print("REAL part, number " + i + ":\t");
             real = sc.nextDouble();
-            //
-            System.out.print("Enter the IMAGE part of the complex number " + i + ": ");
-            image = sc.nextDouble();
-            //
             sumreal = sumreal + real;
+        }
+        for (int i = 1; i <= randomNumber; i++)
+        {
+            System.out.print("IMAGE part, number " + i + ":\t");
+            image = sc.nextDouble();
             sumimage = sumimage + image;
         }
         System.out.println("Sum of "+randomNumber+" complex numbers: Z= "+sumreal+" + "+sumimage+"i.");

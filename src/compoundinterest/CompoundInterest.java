@@ -1,8 +1,10 @@
 package compoundinterest;
+
 import java.lang.Math;
 import java.util.Scanner;
 
 public class CompoundInterest {
+
     public static void main(String[] args) {
 
         int n, t;
@@ -20,4 +22,5 @@ public class CompoundInterest {
         System.out.println("Amount of compound interest: "+comInterest+
                 "\nTotal in return: "+(P+comInterest));
     }
+
 }

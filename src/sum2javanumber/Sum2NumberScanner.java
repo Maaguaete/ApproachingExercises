@@ -1,6 +1,6 @@
-package Cong2SoJava;
+package sum2javanumber;
 import java.util.Scanner;
-public class Cong2SoScanner {
+public class Sum2NumberScanner {
     static public void main(String[] args){
         System.out.print("Input a: ");
         Scanner sc = new Scanner(System.in);

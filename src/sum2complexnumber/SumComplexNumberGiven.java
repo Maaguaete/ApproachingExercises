@@ -1,15 +1,15 @@
-package Sum2ComplexNumber;
+package sum2complexnumber;
 
-public class ComplexNumber {
+public class SumComplexNumberGiven {
     double real;
     double image;
-    ComplexNumber(double a,double b){
+    SumComplexNumberGiven(double a, double b){
         this.real = a;
         this.image = b;
     }
     public static void main(String[] args){
-       ComplexNumber z1 = new ComplexNumber(3,4);
-       ComplexNumber z2 = new ComplexNumber(4,5);
+       SumComplexNumberGiven z1 = new SumComplexNumberGiven(3,4);
+       SumComplexNumberGiven z2 = new SumComplexNumberGiven(4,5);
        double sumreal = z1.real+ z2.real;
        double sumimage = z1.image + z2.image;
        System.out.println("Sum of 2 Complex Numbers is:\nZ = "+sumreal+" + "+sumimage+"i .");
