@@ -27,7 +27,7 @@ public class QuadraticEquation {
             x1 = (-b+Math.sqrt(delta))/(2*a);
             x2 = (-b-Math.sqrt(delta))/(2*a);
             System.out.printf("""
-                    This quadratic equation has 2 real solutions!
+                    This quadratic equation has 2 real solutions! Say something!
                     X1 = %.2f.
                     X2 = %.2f.""",x1,x2);
         }
