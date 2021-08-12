@@ -11,7 +11,8 @@ public class DisplayMain {
                 1. Rectangular triangle.
                 2. Upside-down Rectangular Triangle.
                 3. Pyramid.
-                4. Numeric Pyramid.
+                4. Pascal Pyramid.
+                5. Floyd Pyramid.
                 Enter your number here:\s""");
         Scanner sc = new Scanner(System.in);
         int line = sc.nextInt();
@@ -32,6 +33,10 @@ public class DisplayMain {
             case 4-> {
                 NumericPyramid do4 = new NumericPyramid();
                 do4.display();
+            }
+            case 5-> {
+                FloydPyramid do5 = new FloydPyramid();
+                do5.display();
             }
         }
     }

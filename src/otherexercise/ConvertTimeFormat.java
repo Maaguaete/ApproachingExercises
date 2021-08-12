@@ -12,7 +12,7 @@ public class ConvertTimeFormat {
         int hours, minutes;
         hours = seconds/3600;
         minutes = (seconds%3600)/60;
-        System.out.format("After converting: %d hours, %d minutes and %d seconds", hours, minutes,seconds%3600%60);
+        System.out.format("After converting: %dh:%dm:%ds", hours, minutes,seconds%3600%60);
     }
     void convertTime(){
         System.out.print("1. Convert from hours, minutes to seconds.\n2. Convert from seconds to hours, minutes.");
