@@ -7,6 +7,8 @@ public class Account {
     private long accNumber;
     private String accName;
     private double balance;
+    private double interestRate = 0.035;
+
     Scanner sc = new Scanner(System.in);
     NumberFormat currency = NumberFormat.getCurrencyInstance();
 
@@ -18,39 +20,45 @@ public class Account {
         this.balance = balance;
     }
 
+    public void displayBalance(){
+        System.out.printf("%s's account balance now is: %s.\n",getAccName(),currency.format(balance));
+    }
+    public void mature(){
+        double interestPayment;
+        interestPayment = balance*interestRate;
+        balance = balance + interestPayment;
+        System.out.printf("%s's account's just received %s of interest payment from 1 month maturity bond.\n",
+                accName,currency.format(interestPayment));
+    }
+
     public double depositing(){
 
         System.out.print("Amount of money to add: ");
         double deposit = sc.nextDouble();
-        if (deposit<0){
+        if (deposit<=0){
             System.out.println("Invalid deposit money!");
 
         } else {
             balance = balance + deposit;
-            System.out.printf("%s's account's just received %s.\n" +
-                    "%s's account balance now is: %s\n",
-                    accName,currency.format(deposit),accName, currency.format(balance));
+            System.out.printf("%s's account's just received %s.\n",accName,currency.format(deposit));
         }
         return deposit;
     }
 
-    public double withdrawing(){
+    public void withdrawing(){
 
         System.out.print("Enter the amount of withdraw money: ");
         double withdrawal = sc.nextDouble();
-        if(withdrawal<=balance){
+        if(withdrawal<=balance && withdrawal>0){
             balance = balance-withdrawal;
-            System.out.printf("%s's account's just been withdrawn %s.\n" +
-                    "%s's account balance now is: %s\n",
-                    accName,currency.format(withdrawal),accName, currency.format(balance));
+            System.out.printf("%s's just withdrawn %s.\n",accName,currency.format(withdrawal));
         }else {
             System.out.println("Invalid withdraw money!");
         }
-        return withdrawal;
     }
 
     void displayAllAccount(){
-        System.out.printf("%-18d %-32s %-20s\n", accNumber, accName, currency.format(balance));
+        System.out.printf("%-18d %-25s %-20s\n", accNumber, accName, currency.format(balance));
     }
 
     @Override
