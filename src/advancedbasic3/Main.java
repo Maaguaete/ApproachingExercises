@@ -62,7 +62,6 @@ public class Main {
                         }
                     }
                 }
-
                 case 4-> {
                     System.out.print("Withdraw from Account Number: ");
                     long input = sc.nextLong();
